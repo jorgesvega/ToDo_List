@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		FD27F1D41F72932800BC55EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27F1D31F72932800BC55EE /* AppDelegate.swift */; };
-		FD27F1D61F72932800BC55EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27F1D51F72932800BC55EE /* ViewController.swift */; };
 		FD27F1D91F72932800BC55EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD27F1D71F72932800BC55EE /* Main.storyboard */; };
 		FD27F1DC1F72932800BC55EE /* Notas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD27F1DA1F72932800BC55EE /* Notas.xcdatamodeld */; };
 		FD27F1DE1F72932800BC55EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD27F1DD1F72932800BC55EE /* Assets.xcassets */; };
 		FD27F1E11F72932800BC55EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD27F1DF1F72932800BC55EE /* LaunchScreen.storyboard */; };
+		FD27F1EE1F72957A00BC55EE /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27F1ED1F72957A00BC55EE /* NotesVC.swift */; };
+		FD27F1F01F72958C00BC55EE /* AgendaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27F1EF1F72958C00BC55EE /* AgendaVC.swift */; };
+		FD27F1F21F72978E00BC55EE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27F1F11F72978E00BC55EE /* Note.swift */; };
+		FD27F1F41F72A8CB00BC55EE /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27F1F31F72A8CB00BC55EE /* AddNoteView.swift */; };
+		FD27F1F61F72A8DB00BC55EE /* AddNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD27F1F51F72A8DB00BC55EE /* AddNoteView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD27F1D01F72932800BC55EE /* Notas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD27F1D31F72932800BC55EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD27F1D51F72932800BC55EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD27F1D81F72932800BC55EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD27F1DB1F72932800BC55EE /* Notas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notas.xcdatamodel; sourceTree = "<group>"; };
 		FD27F1DD1F72932800BC55EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD27F1E01F72932800BC55EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD27F1E21F72932800BC55EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD27F1ED1F72957A00BC55EE /* NotesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
+		FD27F1EF1F72958C00BC55EE /* AgendaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaVC.swift; sourceTree = "<group>"; };
+		FD27F1F11F72978E00BC55EE /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		FD27F1F31F72A8CB00BC55EE /* AddNoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
+		FD27F1F51F72A8DB00BC55EE /* AddNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNoteView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		FD27F1D21F72932800BC55EE /* Notas */ = {
 			isa = PBXGroup;
 			children = (
-				FD27F1D31F72932800BC55EE /* AppDelegate.swift */,
-				FD27F1D51F72932800BC55EE /* ViewController.swift */,
-				FD27F1D71F72932800BC55EE /* Main.storyboard */,
-				FD27F1DD1F72932800BC55EE /* Assets.xcassets */,
-				FD27F1DF1F72932800BC55EE /* LaunchScreen.storyboard */,
-				FD27F1E21F72932800BC55EE /* Info.plist */,
-				FD27F1DA1F72932800BC55EE /* Notas.xcdatamodeld */,
+				FD27F1EB1F72935F00BC55EE /* Resources */,
+				FD27F1EC1F72937400BC55EE /* App */,
 			);
 			path = Notas;
+			sourceTree = "<group>";
+		};
+		FD27F1E81F72934800BC55EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD27F1F11F72978E00BC55EE /* Note.swift */,
+				FD27F1DA1F72932800BC55EE /* Notas.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FD27F1E91F72934F00BC55EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD27F1D71F72932800BC55EE /* Main.storyboard */,
+				FD27F1DF1F72932800BC55EE /* LaunchScreen.storyboard */,
+				FD27F1F31F72A8CB00BC55EE /* AddNoteView.swift */,
+				FD27F1F51F72A8DB00BC55EE /* AddNoteView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FD27F1EA1F72935400BC55EE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD27F1ED1F72957A00BC55EE /* NotesVC.swift */,
+				FD27F1EF1F72958C00BC55EE /* AgendaVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FD27F1EB1F72935F00BC55EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD27F1DD1F72932800BC55EE /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FD27F1EC1F72937400BC55EE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FD27F1D31F72932800BC55EE /* AppDelegate.swift */,
+				FD27F1E21F72932800BC55EE /* Info.plist */,
+				FD27F1EA1F72935400BC55EE /* Controller */,
+				FD27F1E91F72934F00BC55EE /* View */,
+				FD27F1E81F72934800BC55EE /* Model */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +151,6 @@
 				TargetAttributes = {
 					FD27F1CF1F72932800BC55EE = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = H8VCT6NS95;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -129,6 +180,7 @@
 			files = (
 				FD27F1E11F72932800BC55EE /* LaunchScreen.storyboard in Resources */,
 				FD27F1DE1F72932800BC55EE /* Assets.xcassets in Resources */,
+				FD27F1F61F72A8DB00BC55EE /* AddNoteView.xib in Resources */,
 				FD27F1D91F72932800BC55EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,8 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD27F1D61F72932800BC55EE /* ViewController.swift in Sources */,
+				FD27F1F41F72A8CB00BC55EE /* AddNoteView.swift in Sources */,
 				FD27F1DC1F72932800BC55EE /* Notas.xcdatamodeld in Sources */,
+				FD27F1F21F72978E00BC55EE /* Note.swift in Sources */,
+				FD27F1EE1F72957A00BC55EE /* NotesVC.swift in Sources */,
+				FD27F1F01F72958C00BC55EE /* AgendaVC.swift in Sources */,
 				FD27F1D41F72932800BC55EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H8VCT6NS95;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Notas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesvega.Notas;
@@ -278,7 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H8VCT6NS95;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Notas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesvega.Notas;
