@@ -18,7 +18,7 @@ class NotesVC: UIViewController {
     @IBAction func actionAddNote(_ sender: Any) {
         UIView.animate(withDuration: 0.8, delay: 0.0, options: .beginFromCurrentState, animations: {
             self.viewAddNoteView.frame = CGRect(x: 0,
-                                                y: self.view.frame.size.height - self.viewAddNoteView.frame.size.height,
+                                                y: self.view.frame.size.height - self.viewAddNoteView.frame.size.height - 50,
                                                 width: self.viewAddNoteView.frame.size.width,
                                                 height: self.viewAddNoteView.frame.size.height)
             self.view.layoutIfNeeded()
@@ -65,7 +65,7 @@ extension NotesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        var note = notesArray[indexPath.row]
+        let note = notesArray[indexPath.row]
         cell.textLabel?.text = note.title
         return cell
     }

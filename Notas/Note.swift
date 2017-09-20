@@ -22,10 +22,9 @@ class Note {
     }
     
     static func generateNotes() -> [Note]  {
+        // Default data
         let note1 = Note(title: "Prueba 1", description: "Nota de prueba número 1", dateDue: 1505911175485)
-        
         let note2 = Note(title: "Prueba 2", description: "Nota de prueba número 2", dateDue: 1505911005485)
-        
         let note3 = Note(title: "Prueba 3", description: "Nota de prueba número 3", dateDue: 1505001175485)
         
         return [note1, note2, note3]

@@ -151,6 +151,7 @@
 				TargetAttributes = {
 					FD27F1CF1F72932800BC55EE = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = EDLN3ZMJNW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -320,10 +321,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = EDLN3ZMJNW;
 				INFOPLIST_FILE = Notas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesvega.Notas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesvega.todoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -333,10 +334,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = EDLN3ZMJNW;
 				INFOPLIST_FILE = Notas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesvega.Notas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgesvega.todoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -361,6 +362,7 @@
 				FD27F1E71F72932800BC55EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
