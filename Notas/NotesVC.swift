@@ -45,7 +45,7 @@ class NotesVC: UIViewController {
     
     fileprivate func initializeData() {
         self.viewAddNoteView.delegate = self
-        notesArray = Note.generateNotes()
+        //notesArray = Note.generateNotes()
         self.tableView.reloadData()
     }
     

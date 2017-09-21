@@ -22,14 +22,14 @@ class Note {
         self.dateDue = dateDue
     }
     
-    static func generateNotes() -> [Note]  {
-        // Default data
-        let note1 = Note(title: "Prueba 1", taskInfo: "Nota de prueba número 1", dateDue: 1505911175485)
-        let note2 = Note(title: "Prueba 2", taskInfo: "Nota de prueba número 2", dateDue: 1505911005485)
-        let note3 = Note(title: "Prueba 3", taskInfo: "Nota de prueba número 3", dateDue: 1505001175485)
-        
-        return [note1, note2, note3]
-    }
+//    static func generateNotes() -> [Note]  {
+//        // Default data
+//        let note1 = Note(title: "Prueba 1", taskInfo: "Nota de prueba número 1", dateDue: 1505911175485)
+//        let note2 = Note(title: "Prueba 2", taskInfo: "Nota de prueba número 2", dateDue: 1505911005485)
+//        let note3 = Note(title: "Prueba 3", taskInfo: "Nota de prueba número 3", dateDue: 1505001175485)
+//        
+//        return [note1, note2, note3]
+//    }
     
     func saveNote() -> Note? {
         
@@ -62,8 +62,7 @@ class Note {
         
     }
     
-    func fetchNotes() -> [Note]? {
-            
+    func fetchNotes() -> [NSManagedObject]? {
             //1
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
                     return nil
@@ -79,10 +78,7 @@ class Note {
             //3
             do {
                 let noteArrayAsManaged: [NSManagedObject] = try managedContext.fetch(fetchRequest)
-                var notesArray: [Note] = []
-                for note in noteArrayAsManaged {
-//                    notesArray.append((note))
-                }
+                return noteArrayAsManaged
             } catch let error as NSError {
                 print("Could not fetch. \(error), \(error.userInfo)")
                 return nil
