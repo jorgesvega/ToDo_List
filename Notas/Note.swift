@@ -68,7 +68,7 @@ class Note {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
                     return nil
             }
-            
+        
             let managedContext =
                 appDelegate.persistentContainer.viewContext
             
@@ -81,7 +81,7 @@ class Note {
                 let noteArrayAsManaged: [NSManagedObject] = try managedContext.fetch(fetchRequest)
                 var notesArray: [Note] = []
                 for note in noteArrayAsManaged {
-                    notesArray.append(note as? Note)
+//                    notesArray.append((note))
                 }
             } catch let error as NSError {
                 print("Could not fetch. \(error), \(error.userInfo)")
