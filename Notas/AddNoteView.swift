@@ -33,6 +33,7 @@ protocol AddNoteViewDelegate {
     
     @IBAction func actionCancel(_ sender: Any) {
         delegate?.didCancel()
+        clearFields()
     }
     
     @IBAction func actionDatePicker(_ sender: UIDatePicker) {
@@ -93,33 +94,16 @@ protocol AddNoteViewDelegate {
                 return
         }
         
-        // CORE DATA
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
+        let createdNote: Note = Note(title: titleData, taskInfo: descriptionData, dateDue: selectedPickerDate)
         
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
+        delegate?.didSave(createdNote.saveNote() ?? Note(title: "error", taskInfo: "error", dateDue: nil))
         
-        let entity =
-            NSEntityDescription.entity(forEntityName: "NoteCD",
-                                       in: managedContext)!
-        
-        let note = NSManagedObject(entity: entity,
-                                     insertInto: managedContext)
-        
-        note.setValue(titleData, forKeyPath: "noteTitle")
-        note.setValue(descriptionData, forKeyPath: "noteDescription")
-        note.setValue(selectedPickerDate, forKey: "noteDate")
-        
-        do {
-            try managedContext.save()
-            //people.append(person)
-            delegate?.didSave(Note(title: note.value(forKey: "noteTitle") as! String, description: note.value(forKey: "noteDescription") as! String, dateDue: note.value(forKey: "noteDate") as? Double))
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
+        clearFields()
+    }
+    
+    fileprivate func clearFields() {
+        textFieldTitle.text = ""
+        textFieldDescription.text = ""
     }
     
     @IBInspectable dynamic var borderColor: UIColor = UIColor.green {

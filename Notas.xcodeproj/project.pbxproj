@@ -17,6 +17,7 @@
 		FD27F1F21F72978E00BC55EE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27F1F11F72978E00BC55EE /* Note.swift */; };
 		FD27F1F41F72A8CB00BC55EE /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27F1F31F72A8CB00BC55EE /* AddNoteView.swift */; };
 		FD27F1F61F72A8DB00BC55EE /* AddNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD27F1F51F72A8DB00BC55EE /* AddNoteView.xib */; };
+		FD5D751E1F73A25800D75E9A /* Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5D751D1F73A25800D75E9A /* Connections.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FD27F1F11F72978E00BC55EE /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		FD27F1F31F72A8CB00BC55EE /* AddNoteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		FD27F1F51F72A8DB00BC55EE /* AddNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNoteView.xib; sourceTree = "<group>"; };
+		FD5D751D1F73A25800D75E9A /* Connections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				FD27F1D31F72932800BC55EE /* AppDelegate.swift */,
+				FD5D751D1F73A25800D75E9A /* Connections.swift */,
 				FD27F1E21F72932800BC55EE /* Info.plist */,
 				FD27F1EA1F72935400BC55EE /* Controller */,
 				FD27F1E91F72934F00BC55EE /* View */,
@@ -195,6 +198,7 @@
 			files = (
 				FD27F1F41F72A8CB00BC55EE /* AddNoteView.swift in Sources */,
 				FD27F1DC1F72932800BC55EE /* Notas.xcdatamodeld in Sources */,
+				FD5D751E1F73A25800D75E9A /* Connections.swift in Sources */,
 				FD27F1F21F72978E00BC55EE /* Note.swift in Sources */,
 				FD27F1EE1F72957A00BC55EE /* NotesVC.swift in Sources */,
 				FD27F1F01F72958C00BC55EE /* AgendaVC.swift in Sources */,

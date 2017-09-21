@@ -16,13 +16,7 @@ class NotesVC: UIViewController {
     
     // MARK: - IBActions
     @IBAction func actionAddNote(_ sender: Any) {
-        UIView.animate(withDuration: 0.8, delay: 0.0, options: .beginFromCurrentState, animations: {
-            self.viewAddNoteView.frame = CGRect(x: 0,
-                                                y: self.view.frame.size.height - self.viewAddNoteView.frame.size.height - 50,
-                                                width: self.viewAddNoteView.frame.size.width,
-                                                height: self.viewAddNoteView.frame.size.height)
-            self.view.layoutIfNeeded()
-        }, completion: nil)
+        showAlertView()
     }
     
     // MARK: - Properties
@@ -54,6 +48,26 @@ class NotesVC: UIViewController {
         notesArray = Note.generateNotes()
         self.tableView.reloadData()
     }
+    
+    func showAlertView() {
+        UIView.animate(withDuration: 0.8, delay: 0.0, options: .beginFromCurrentState, animations: {
+            self.viewAddNoteView.frame = CGRect(x: 0,
+                                                y: self.view.frame.size.height - self.viewAddNoteView.frame.size.height - 50,
+                                                width: self.viewAddNoteView.frame.size.width,
+                                                height: self.viewAddNoteView.frame.size.height)
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    func hideAlertView() {
+        UIView.animate(withDuration: 0.8, delay: 0.0, options: .beginFromCurrentState, animations: {
+            self.viewAddNoteView.frame = CGRect(x: 0,
+                                                y: self.view.frame.size.height + self.viewAddNoteView.frame.size.height + 50,
+                                                width: self.viewAddNoteView.frame.size.width,
+                                                height: self.viewAddNoteView.frame.size.height)
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
 
 }
 
@@ -74,7 +88,7 @@ extension NotesVC: UITableViewDelegate, UITableViewDataSource {
 extension NotesVC: AddNoteViewDelegate{
     
     func didCancel() {
-        print("CANCEL")
+        hideAlertView()
     }
     
     func didSave(_ note: Note) {
@@ -82,6 +96,8 @@ extension NotesVC: AddNoteViewDelegate{
         
         notesArray.append(note)
         tableView.reloadData()
+        
+        hideAlertView()
     }
     
 }
