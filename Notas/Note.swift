@@ -62,26 +62,37 @@ class Note {
         
     }
     
-    func fetchNotes() -> [NSManagedObject]? {
-            //1
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-                    return nil
-            }
+    class func fetchNotes() -> [Note]? {
+        //1
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
         
-            let managedContext =
-                appDelegate.persistentContainer.viewContext
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        //2
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "NoteCD")
+        
+        //3
+        var arrayNotes = [Note]()
+        
+        do {
+            let noteArrayAsManaged: [NSManagedObject] = try managedContext.fetch(fetchRequest)
             
-            //2
-            let fetchRequest =
-                NSFetchRequest<NSManagedObject>(entityName: "NoteCD")
-            
-            //3
-            do {
-                let noteArrayAsManaged: [NSManagedObject] = try managedContext.fetch(fetchRequest)
-                return noteArrayAsManaged
-            } catch let error as NSError {
-                print("Could not fetch. \(error), \(error.userInfo)")
-                return nil
+            for note in noteArrayAsManaged {
+                let objectNote = Note(title: note.value(forKey: "noteTitle") as! String,
+                                      taskInfo: note.value(forKey: "noteDescription") as! String,
+                                      dateDue: note.value(forKey: "noteDate") as? Double)
+                arrayNotes.append(objectNote)
             }
+            
+            return arrayNotes
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+            return nil
+        }
     }
 }

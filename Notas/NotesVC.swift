@@ -46,6 +46,7 @@ class NotesVC: UIViewController {
     fileprivate func initializeData() {
         self.viewAddNoteView.delegate = self
         //notesArray = Note.generateNotes()
+        notesArray = Note.fetchNotes() ?? [] // Class method -> Para acceder a un método de un modelo sin instanciarlo
         self.tableView.reloadData()
     }
     
